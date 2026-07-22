@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    container_name: Abhilasha-Das-Portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8090:80"
+    restart: always

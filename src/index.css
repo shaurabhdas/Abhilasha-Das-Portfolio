@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e1b4b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6366f1;
+}
+
+/* Glassmorphism card utilities - Royal Indigo Theme */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(30, 27, 75, 0.75);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 16px 36px -10px rgba(99, 102, 241, 0.25);
+  transform: translateY(-4px);
+}
+
+/* Neon & Ambient Glows */
+.glow-indigo {
+  box-shadow: 0 0 50px -5px rgba(99, 102, 241, 0.3);
+}
+
+.glow-violet {
+  box-shadow: 0 0 50px -5px rgba(168, 85, 247, 0.3);
+}
+
+.glow-amber {
+  box-shadow: 0 0 35px -5px rgba(234, 179, 8, 0.3);
+}
+
+/* Animated gradient text */
+.gradient-text-indigo {
+  background: linear-gradient(135deg, #a5b4fc 0%, #c084fc 50%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-amber {
+  background: linear-gradient(135deg, #fde047 0%, #facc15 50%, #f97316 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth keyframes fade */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
